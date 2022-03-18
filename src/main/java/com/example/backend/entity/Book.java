@@ -1,9 +1,11 @@
 package com.example.backend.entity;
 
 import lombok.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
-import java.util.List;
+import java.io.File;
+import java.sql.Blob;
 
 @Getter
 @Setter
@@ -18,5 +20,6 @@ public class Book {
     private String title;
     private String description;
     private double price;
-    private byte[] image;
+    @Lob
+    private String image;
 }
