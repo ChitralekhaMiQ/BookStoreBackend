@@ -21,5 +21,5 @@ public class Book {
     private String description;
     private double price;
     @Lob
-    private String image;
+    private byte[] image;
 }

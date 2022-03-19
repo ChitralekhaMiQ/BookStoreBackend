@@ -20,8 +20,7 @@ public class UserController {
     private UserRepository userrepository;
 
     @PostMapping("/signUp")
-    public User insertUsers(@RequestBody User user)
-    {
+    public User insertUsers(@RequestBody User user) {
         return userrepository.save(user);
     }
 
