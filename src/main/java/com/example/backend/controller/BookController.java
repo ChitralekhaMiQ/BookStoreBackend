@@ -22,7 +22,6 @@ public class BookController {
 
     @PostMapping("/addBook")
     public List<Book> addBook(@RequestPart Book book, @RequestPart("image") MultipartFile imageFile) throws IOException {
-        //book.setImage(Base64.getEncoder().encodeToString(book.getImage().getBytes()));
         book.setImage(imageFile.getBytes());
         bookrepository.save(book);
         return bookrepository.findAll();
